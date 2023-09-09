@@ -25,9 +25,14 @@ function createPassword() {
     password += number[Math.floor(Math.random() * number.length)];
     password += symbols[Math.floor(Math.random() * symbols.length)];
     password.length += 4;
-    console.log(password.length);
+    // console.log(password.length);
   }
 
   passwordBox.value = password;
-  console.log(password);
+  // console.log(password);
+}
+
+function copyPassword() {
+  passwordBox.select();
+  document.execCommand("copy");
 }
